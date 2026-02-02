@@ -281,7 +281,7 @@ Po włączeniu programu można podłączyć kabel ethernet i włączyć zasilani
 </details>
  
 
-
+***
 
 
 
