@@ -83,6 +83,8 @@ Wyjdź i posprzątaj
 teraz wpis w EFI(/boot/efi/EFI/Debian/) już jest stworzony linux bedzie botował się normalnie.      
 Koniec instalacji wyjmij pendrive, przy starcie możesz włączyć boot menager klikając np F7 zależnie od biosu.         
 </details>
+
+---
       
 <details>
 <summary id=2. Przygotowanie sytemu pod Ethercat >2. Przygotowanie sytemu pod Ethercat</summary>  
@@ -117,6 +119,8 @@ Continue? [Y/n] y
 ```git --version```    
          
 </details>
+
+---
    
 <details>
 <summary id=3. Instalcja IGH EtherCat Master >3. Instalcja IGH EtherCat Master</summary>  
@@ -152,6 +156,8 @@ Zapisz i zamknij.
 Restart komputera     
     
 </details>
+
+---
    
 <details>
        
@@ -182,6 +188,8 @@ na tym etapie możesz podłączyć EK1100 i servodrivery z servami do prądu, po
  i wyłączyć zasilanie      
 
  </details>
+
+---
 
 <details>     
    
@@ -221,7 +229,9 @@ HOMEMOD = cia402_homecomp
 Koniec     
 Na tym etapie wszystkie niezbędne komponenty zostały zainstalowane     
 
- </details>
+</details>
+
+---
     
 <details>     
      
