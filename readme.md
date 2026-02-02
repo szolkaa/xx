@@ -67,14 +67,14 @@ wejdź do Debiana (chroot)
 powinno wyświetlić się: Prompt powinien być: root@debian:/#    
   
 Doinstaluj GRUB     
-```apt update```     
-```apt install grub-efi-amd64 efibootmgr```     
+```sudo apt update```     
+```sudo apt install grub-efi-amd64 efibootmgr```     
    
 Zainstaluj GRUB do EFI:    
-```grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Debian```   
+```sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Debian```   
    
-Wygeneruj menu   
-```update-grub```   
+opcjonalnie Wygeneruj menu   
+```sudo update-grub```   
 Wyjdź i posprzątaj    
 ```exit```   
 ```sudo umount -R /mnt```    
@@ -104,7 +104,7 @@ znajdz nazwę karty:
 ![b2.1](images/b2.1.png) 
     
 wyłącz Menagera, pod eth1 podstaw własną nazwę:     
-```nmcli device set eth1 managed no```    
+```sudo nmcli device set eth1 managed no```    
 sprawdz czy została wyłączona:        
 ```nmcli device status```     
           
@@ -173,12 +173,12 @@ Restart komputera
     
 na tym etapie możesz podłączyć EK1100 i servodrivery z servami do prądu, podączyć do karty sieciowej:       
  zresetować błędny na servodriverach jeśli występują, zgodnie z instrukcją obsługi.    
- Potem sprawdzić:   
+ Potem sprawdzić:    
 ```sudo ethercat master```    
 ```sudo ethercat slaves```    
-```sudo ethtool -i eth0```
-```uname -a```
-```latency-histogram```  
+```sudo ethtool -i eth0```    
+```uname -a```    
+```latency-histogram```     
  
  ![b4.2](images/b4.2.png)
       
@@ -196,16 +196,16 @@ na tym etapie możesz podłączyć EK1100 i servodrivery z servami do prądu, po
 <summary  id=5. instalacja custom homing>5. instalacja custom homing</summary>    
 
 
-Zainstaluj linuxcnc       
+Zainstaluj żródła linuxcnc-dev      
 ```git clone https://github.com/LinuxCNC/linuxcnc.git linuxcnc-dev```      
-       
+potem skopiuj pliki Homing      
 ```cd ~/dev```      
 ```git clone https://github.com/rodw-au/cia402_homecomp```      
      
 5.1 teraz trzeba podmienić jedną linijkę.     
 Przejdz się po folderach i znajdz ten plik:    
 /home/..../linuxcnc-dev/src/emc/motion/homing.c i skopiuj jego dokładną ścieżkę     
-image     
+     
        
 potem wejdz do folderu /home/dev/cia402_homecomp,
      
