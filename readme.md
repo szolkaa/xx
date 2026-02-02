@@ -150,10 +150,12 @@ i zapisz i zamknij.
 3.3 Zgoda dla Ethercat master przy starcie systemu      
 ```sudo geany /etc/udev/rules.d/99-ethercat.rules```      
 wklej:      
-```KERNEL=="EtherCAT[0-9]", MODE="0777"```      
-Zapisz i zamknij.     
-     
-Restart komputera     
+```KERNEL=="EtherCAT[0-9]", MODE="0777"```     
+Zapisz i zamknij.    
+           
+Potem wpisz         
+```sudo udevadm control --reload-rules```      
+Restart komputera        
     
 </details>
 
