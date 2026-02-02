@@ -138,8 +138,7 @@ Continue? [Y/n] y
  MASTER0_DEVICE=""    
  DEVICE_MODULES="generic"    
 i zapisz i zamknij.
- *jeśli sterowniki dla twojej karty sieciowej zawiera Ethercatmaster np. Intel i210 automatycznnie zostaną użyte mimo trybu generic    
- po całym etapie konfiguracji Ethecatmaster na końcu tego rozdziału można sprawdzić rodzaj użytego drivera:      
+
        
 3.2 Pierwsze włączenie Ethercat po kolei:      
 ```sudo systemctl enable ethercat.service```      
