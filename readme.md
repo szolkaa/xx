@@ -62,19 +62,19 @@ Podmontuj katalogi systemowe po kolei:
 ```sudo mount --bind /run  /mnt/run```    
    
 teraz instalacja GRUB:       
-wejdź do Debiana (chroot)     
+wejdź do Debiana (ch root)     
 ```sudo chroot /mnt```    
 powinno wyświetlić się: Prompt powinien być: root@debian:/#    
   
 Doinstaluj GRUB     
-```sudo apt update```     
-```sudo apt install grub-efi-amd64 efibootmgr```     
+```apt update```     
+```apt install grub-efi-amd64 efibootmgr```     
    
 Zainstaluj GRUB do EFI:    
-```sudo grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Debian```   
+```grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Debian```   
    
 opcjonalnie Wygeneruj menu   
-```sudo update-grub```   
+```update-grub```   
 Wyjdź i posprzątaj    
 ```exit```   
 ```sudo umount -R /mnt```    
