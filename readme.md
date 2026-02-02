@@ -171,7 +171,7 @@ Restart komputera
 ```cd hal-cia402```    
 ```sudo halcompile --install cia402.comp``` 
       
-![b4.1](images/b4.1.png)    
+  
     
 na tym etapie możesz podłączyć EK1100 i servodrivery z servami do prądu, podączyć do karty sieciowej:       
  zresetować błędny na servodriverach jeśli występują, zgodnie z instrukcją obsługi.    
