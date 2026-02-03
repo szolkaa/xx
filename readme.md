@@ -27,7 +27,7 @@ Wybór partycji: potrzebna jest jedna partycja systemowa EFI, partycja swap 4-16
 użyj jako: partycja systemowa EFI                          
 Uzyj jako: partycja swap 4-16 GB      
 Uzyj jako: Partycja ext 4 z punknem montowania    
-*jeśli to bios legecy nie UEFI to nie tworzymy partycji EFI
+*jeśli to bios legecy nie UEFI to nie tworzymy partycji EFI    
 *jeśli partycja efi istnieje wybierz użyj jako partycji systemowej i bez formatowania.    
 *w partycji EFI musi istnieć wpis Debian aby system sie zbotował z dysku    
      
