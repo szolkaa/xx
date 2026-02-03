@@ -326,45 +326,45 @@ If the servo drivers are in the PREOP state, you can de-energize them:
 
 <details>     
      
-<summary id="5. Podpinanie karty pod Ethercat master">5. Podpinanie karty pod Ethercat master</summary>    
+<summary id="5. Connecting the card to the EtherCAT master">5. Connecting the card to the EtherCAT master</summary>   
      
-Kartę sieciową można podpiąć pod IGH Ethercat master Jeśli zostanie przez niego rozpoznana.     
-wspierane karty to głównie intel ze sterownikiem igb igc 1000 1000e.     
-Powoduje to większą kompatybilność z realtime i prace karty tylko pod skrzydłem ethercat.     
-     
-sprawdzanie rodzaju sterownika karty sieciowej w Kernel.     
-```sudo apt update```     
-```sudo apt install ethtool```     
-znajdz nazwę swojej karty     
-```ip a```     
-
-![b.7.1](images/b.7.1.png)   
-      
-i podmień nazwę za enp3s0 na własną     
-```sudo ethtool -i enp3s0```       
-model karty     
-```lspci -nn | grep -i ethernet```  
-      
-![b7.2](images/b7.2.png)          
+The network card can be connected to the IGH EtherCAT master if it is recognized by it.      
+Supported cards are mainly Intel with the igb  igc 1000 or 1000e driver.       
+This ensures greater compatibility with real-time operations and allows the card to work exclusively under the control of EtherCAT.     
        
-jeśli sterownik karty ma nazwę igb igc 1000 1000e i kilka innych wymienionych w ethercat.conf spróbujemy ją podpiąć pod mastera zamiast używać trybu generic.   
-      
-```sudo geany /etc/ethercat.conf```
-
- w tym przypadku zamiana generic na: 
- 
-DEVICE_MODULES="igb"    
-
-zapisz i zamknij      
+Checking the type of network card driver in the Kernel.        
+```sudo apt update```       
+```sudo apt install ethtool```       
+Find the name of your card          
+```ip a```      
      
+![b.7.1](images/b.7.1.png)   
+        
+and replace the name enp3s0 with your own         
+```sudo ethtool -i enp3s0```         
+Network card model     
+```lspci -nn | grep -i ethernet```     
+       
+![b7.2](images/b7.2.png)          
+        
+If the network card driver is named igb, igc, 1000, 1000e, or any of the others listed in ethercat.conf, we will try to connect it to the master instead of using the generic mode.     
+       
+```sudo geany /etc/ethercat.conf```    
+   
+In this case, replace generic with:    
+    
+DEVICE_MODULES="igb"    
+      
+Save and close    
+        
 ```sudo systemctl stop ethercat```     
 ```sudo systemctl start ethercat```    
      
-Sprawdzamy czy karta jest Native/attached     
+We check whether the card is Native/attached   
      
 ![b7.3](images/b7.3.png)         
      
-jeśli nie wróć do ethercat.conf i zapisz spowrotem generic.       
+If not, return to ethercat.conf and save generic again.     
 
 
  </details>
