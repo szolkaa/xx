@@ -1,4 +1,4 @@
-# Od instalacji LinuxCNC 2.9.8 Debian 13 przez IGH EtherCat Master do pierwszego ruchu silnika         
+# Od instalacji LinuxCNC 2.9.8 Debian 13 przez EtherCat Master do pierwszego ruchu silnika         
         
       
  
@@ -123,7 +123,7 @@ Continue? [Y/n] y
 ---
    
 <details>
-<summary id=3. Instalacja IGH EtherCat Master >3. Instalacja IGH EtherCat Master</summary>  
+<summary id=3. Instalacja EtherCat Master >3. Instalacja EtherCat Master</summary>  
      
    Przygotowanie sytemu pod Ethercat    
         
