@@ -135,7 +135,7 @@ Continue? [Y/n] y
  Potem wypełnij    
  ```sudo geany /etc/ethercat.conf```     
      
- MASTER0_DEVICE=""    
+ MASTER0_DEVICE="................"    
  DEVICE_MODULES="generic"    
 i zapisz i zamknij.
 
