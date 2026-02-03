@@ -105,7 +105,7 @@ znajdz nazwę karty:
     
 wyłącz Menagera, pod eth1 podstaw własną nazwę:     
 ```sudo nmcli device set eth1 managed no```    
-sprawdz czy została wyłączona:        
+sprawdz czy została unmenaged:        
 ```nmcli device status```     
           
 2.4 Aktualizacja systemu      
