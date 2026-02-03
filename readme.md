@@ -82,9 +82,32 @@ Wyjdź i posprzątaj
 ```reboot```    
      
 teraz wpis w EFI(/boot/efi/EFI/Debian/) już jest stworzony linux bedzie botował się normalnie.      
-Koniec instalacji wyjmij pendrive, przy starcie możesz włączyć boot menager klikając np F7 zależnie od biosu.         
-</details>
+Koniec instalacji wyjmij pendrive, przy starcie możesz włączyć boot menager klikając np F7 zależnie od biosu. 
 
+*Jeśli masz bios legecy komendy wyglądają następująco:
+Zamontuj partycję  /ext4 po nazwie w tym przypadku:  
+```sudo mount /dev/nvme0n1p7 /mnt```
+
+Podmontuj katalogi systemowe po kolei:    
+```sudo mount --bind /dev  /mnt/dev```    
+```sudo mount --bind /proc /mnt/proc```    
+```sudo mount --bind /sys  /mnt/sys```    
+```sudo mount --bind /run  /mnt/run``` 
+wejdź do Debiana (ch root)     
+```sudo chroot /mnt```    
+Zainstaluj GRUB do /ext4 wpisując za nvme0n7 własną nazwę partycji          
+```apt update && apt install -y grub-pc && grub-install /dev/nvme0n7 && update-grub```     
+    
+    
+opcjonalnie Wygeneruj menu    
+```update-grub```    
+Wyjdź i posprzątaj               
+```exit```    
+```sudo umount -R /mnt```     
+```reboot```     
+     
+</details>    
+       
 ---
       
 <details>
