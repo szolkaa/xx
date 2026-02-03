@@ -92,7 +92,7 @@ Podmontuj katalogi systemowe po kolei:
 ```sudo mount --bind /dev  /mnt/dev```    
 ```sudo mount --bind /proc /mnt/proc```    
 ```sudo mount --bind /sys  /mnt/sys```    
-```sudo mount --bind /run  /mnt/run``` 
+```sudo mount --bind /run  /mnt/run```    
 wejdź do Debiana (ch root)     
 ```sudo chroot /mnt```    
 Zainstaluj GRUB do MBR całego dysku wpisując za nvme0n1 własną nazwę dysku        
