@@ -95,8 +95,8 @@ Podmontuj katalogi systemowe po kolei:
 ```sudo mount --bind /run  /mnt/run``` 
 wejdź do Debiana (ch root)     
 ```sudo chroot /mnt```    
-Zainstaluj GRUB do /ext4 wpisując za nvme0n7 własną nazwę partycji          
-```apt update && apt install -y grub-pc && grub-install /dev/nvme0n7 && update-grub```     
+Zainstaluj GRUB do MBR całego dysku wpisując za nvme0n1 własną nazwę dysku        
+```apt update && apt install -y grub-pc && grub-install /dev/nvme0n1 && update-grub```     
     
     
 opcjonalnie Wygeneruj menu    
