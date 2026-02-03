@@ -123,7 +123,7 @@ Continue? [Y/n] y
 ---
    
 <details>
-<summary id=3. Instalcja IGH EtherCat Master >3. Instalcja IGH EtherCat Master</summary>  
+<summary id=3. Instalacja IGH EtherCat Master >3. Instalacja IGH EtherCat Master</summary>  
      
    Przygotowanie sytemu pod Ethercat    
         
