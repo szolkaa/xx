@@ -199,7 +199,7 @@ sprawdzanie rodzaju sterownika karty sieciowej w Kernel.
 znajdz nazwę swojej karty     
 ```ip a```     
 
-![b7.1](images/b7.1.png)     
+![b7.11](images/b7.11.png)   
       
 i podmień nazwę za enp3s0 na własną     
 ```sudo ethtool -i enp3s0```       
