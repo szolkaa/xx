@@ -189,7 +189,7 @@ na tym etapie możesz podłączyć EK1100 i servodrivery z servami do prądu, po
      
 <summary id="5. Podpinanie karty pod Ethercat master">5. Podpinanie karty pod Ethercat master</summary>    
      
-Kartę sieciową można podpiąć pod IGH Ethercat master Jeśli zostanie przez niego rozpoznana.     
+Kartę sieciową można podpiąć pod Ethercat master Jeśli zostanie przez niego rozpoznana.     
 wspierane karty to głównie intel ze sterownikiem igb igc 1000 1000e.     
 Powoduje to większą kompatybilność z realtime i prace karty tylko pod skrzydłem ethercat.     
      
