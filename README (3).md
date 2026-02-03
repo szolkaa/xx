@@ -296,20 +296,14 @@ then type
 ```sudo udevadm control --reload-rules```         
 Restart the computer        
       
-</details>    
+  
+</details>  
 
 ---
-      
-<details>    
-            
-<summary id="4.-Install-Cia402.comp">4. Install Cia402.comp</summary>     
-        
-```mkdir -p ~/dev```      
-```cd ~/dev```     
-```git clone https://github.com/dbraun1981/hal-cia402```        
-```cd hal-cia402```      
-```sudo halcompile --install cia402.comp```   
-         
+
+<details>     
+     
+<summary id="4. Connecting servo drivers">4. Connecting servo drives</summary>           
        
 At this stage, you can connect the EK1100 and the servo drivers with the servos to power, connect to the network card:    
 Reset any errors on the servo drivers if they occur, according to the user manual.   
@@ -326,13 +320,75 @@ If the servo drivers are in the PREOP state, you can de-energize them:
  ```sudo ethercat states INIT```      
  and turn off the power         
    
+</details>  
+
+---
+
+<details>     
+     
+<summary id="5. Podpinanie karty pod Ethercat master">5. Podpinanie karty pod Ethercat master</summary>    
+     
+Kartę sieciową można podpiąć pod IGH Ethercat master Jeśli zostanie przez niego rozpoznana.     
+wspierane karty to głównie intel ze sterownikiem igb igc 1000 1000e.     
+Powoduje to większą kompatybilność z realtime i prace karty tylko pod skrzydłem ethercat.     
+     
+sprawdzanie rodzaju sterownika karty sieciowej w Kernel.     
+```sudo apt update```     
+```sudo apt install ethtool```     
+znajdz nazwę swojej karty     
+```ip a```     
+
+![b.7.1](images/b.7.1.png)   
+      
+i podmień nazwę za enp3s0 na własną     
+```sudo ethtool -i enp3s0```       
+model karty     
+```lspci -nn | grep -i ethernet```  
+      
+![b7.2](images/b7.2.png)          
+       
+jeśli sterownik karty ma nazwę igb igc 1000 1000e i kilka innych wymienionych w ethercat.conf spróbujemy ją podpiąć pod mastera zamiast używać trybu generic.   
+      
+```sudo geany /etc/ethercat.conf```
+
+ w tym przypadku zamiana generic na: 
+ 
+DEVICE_MODULES="igb"    
+
+zapisz i zamknij      
+     
+```sudo systemctl stop ethercat```     
+```sudo systemctl start ethercat```    
+     
+Sprawdzamy czy karta jest Native/attached     
+     
+![b7.3](images/b7.3.png)         
+     
+jeśli nie wróć do ethercat.conf i zapisz spowrotem generic.       
+
+
+ </details>
+
+---
+
+<details> 
+   
+            
+<summary id="6.-Install-Cia402.comp">6. Install Cia402.comp</summary>     
+        
+```mkdir -p ~/dev```      
+```cd ~/dev```     
+```git clone https://github.com/dbraun1981/hal-cia402```        
+```cd hal-cia402```      
+```sudo halcompile --install cia402.comp``` 
+
 </details>    
 
 ---
-  
-<details>       
       
-<summary id="5.-Custom-Homing-Installation">5. Custom Homing Installation</summary>     
+<details>        
+      
+<summary id="7.-Custom-Homing-Installation">7. Custom Homing Installation</summary>     
   
    
 Install LinuxCNC source repositories      
@@ -375,7 +431,7 @@ At this stage, all necessary components have been installed
      
 <details>     
      
-<summary id="6.-Starting-LinuxCNC-GUI">6. Starting LinuxCNC GUI</summary>     
+<summary id="8.-Starting-LinuxCNC-GUI">8. Starting LinuxCNC GUI</summary>     
            
 Enter in the terminal:    
 ```linuxcnc```     
