@@ -41,28 +41,35 @@ połącz się z inernetem w toolbar.
      
 ![b1.5](images/b1.5.png)      
      
-Potem otwórz terminal i wprowadz po kolei aby włączyć możliwość pobierania przez internet:    
-    
-```sudo cp /etc/resolv.conf /mnt/etc/resolv.conf```    
-```sudo mount --bind /etc/resolv.conf /mnt/etc/resolv.conf```    
-sprawdz internet:    
-```ping -c 3 deb.debian.org```    
+
     
 1.6 Montowanie i operowanie na partycjach systemowych aby wprowadzić wpis do EFI    
 sprawdz partycje:     
 lsblk -f    
 ![b1.6](images/b1.6.png)        
+  
+  
 Zamontuj partycję efi oraz /ext4 po ich nazwie w tym przypadku:     
+```sudo mkdir -p /mnt```       
 ```sudo mount /dev/nvme0n1p7 /mnt/```           PARTYCJA /EXT4     
-```sudo mount /dev/nvme0n1p1 /mnt/boot/efi```   partycja EFI      
-        
-Podmontuj katalogi systemowe po kolei:    
-```sudo mount --bind /dev  /mnt/dev```    
-```sudo mount --bind /proc /mnt/proc```    
-```sudo mount --bind /sys  /mnt/sys```    
-```sudo mount --bind /run  /mnt/run```    
-   
-teraz instalacja GRUB:       
+```sudo mkdir -p /mnt/boot/efi```          
+```sudo mount /dev/nvme0n1p1 /mnt/boot/efi```   partycja EFI     
+     
+ 
+          
+Podmontuj katalogi systemowe po kolei:      
+```sudo mount --bind /dev  /mnt/dev```      
+```sudo mount --bind /proc /mnt/proc```      
+```sudo mount --bind /sys  /mnt/sys```        
+```sudo mount --bind /run  /mnt/run```      
+    
+ Bind internet do partycji:      
+```sudo mkdir -p /mnt/etc```      
+```sudo mount --bind /etc/resolv.conf /mnt/etc/resolv.conf```       
+sprawdz internet:      
+```ping -c 3 deb.debian.org```        
+     
+teraz instalacja GRUB:        
 wejdź do Debiana (ch root)     
 ```sudo chroot /mnt```    
 powinno wyświetlić się: Prompt powinien być: root@debian:/#    
@@ -86,13 +93,21 @@ Koniec instalacji wyjmij pendrive, przy starcie możesz włączyć boot menager 
 
 *Jeśli masz bios legecy komendy wyglądają następująco:
 Zamontuj partycję  /ext4 po nazwie w tym przypadku:  
+```sudo mkdir -p /mnt```
 ```sudo mount /dev/nvme0n1p7 /mnt```
 
 Podmontuj katalogi systemowe po kolei:    
 ```sudo mount --bind /dev  /mnt/dev```    
 ```sudo mount --bind /proc /mnt/proc```    
 ```sudo mount --bind /sys  /mnt/sys```    
-```sudo mount --bind /run  /mnt/run```    
+```sudo mount --bind /run  /mnt/run```
+      
+Bind internetu do partycji:     
+```sudo mkdir -p /mnt/etc```    
+```sudo mount --bind /etc/resolv.conf /mnt/etc/resolv.conf```       
+    
+  
+    
 wejdź do Debiana (ch root)     
 ```sudo chroot /mnt```    
 Zainstaluj GRUB do MBR całego dysku wpisując za nvme0n1 własną nazwę dysku        
