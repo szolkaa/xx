@@ -341,7 +341,7 @@ jeśli któryś ma status locked usuń go Wpisując( numer odpowadający słupko
 ![b6.2](images/b6.2.png)     
 .   
 .     
-.    
+.  ***Zresetuj Komputer***  
 . ...........................................................................................  
 .     
 .     
