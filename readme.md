@@ -426,7 +426,7 @@ Czasami korzysta się z niewielkiego dystansu pomiędzy narzędziem a powierzchn
       
 Przy każdej osi wybieramy touch off P1 (G54)=0, wtedy do WCS zostaną przypisane wartości aktualnego położenia osi XYZ.     
     
-   
+ ![wcs](images/wcs.png)     
    
     
 </details>
