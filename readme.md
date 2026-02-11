@@ -411,23 +411,23 @@ MAX_LIMIT = 0            MAX_LIMIT = 545
 </details>
 
 ---
+      
+<details>      
+       
+<summary id=10. Układ Współrzędnych Roboczych (WCS)>10. Układ Współrzędnych Roboczych (WCS)</summary>         
+   
+        
+WCS G54 to układ współrzędnych ustawiony względem detalu. Pozwala określić punkt zerowy (0,0,0) detalu i wykonywać ruchy narzędzia względem niego.     
+Ten sam punkt określa się w programie CAM; przeważnie wybiera się róg, środek lub otwór na górnej powierzchni surowego materiału.       
+      
+Podstawową metodą określenia punktu zerowego materiału jest bezpośrednie ustawienie czubka narzędzia w płaszczyznach X i Y nad fizycznym materiałem      
+w miejscu wyznaczonym w programie CAM a następnie zjazd osi Z w dół.         
+Czasami korzysta się z niewielkiego dystansu pomiędzy narzędziem a powierzchnią, np. używając kartki papieru, a w touch off uwzględnia się jej grubość.       
+      
+Przy każdej osi wybieramy touch off P1 (G54)=0, wtedy do WCS zostaną przypisane wartości aktualnego położenia osi XYZ.     
     
-<details>     
-     
-<summary id=10. Układ Współrzędnych Roboczych (WCS)>10. Układ Współrzędnych Roboczych (WCS)</summary>        
-
-
-WCS G54 to układ współrzędnych ustawiony względem detalu. Pozwala określić punkt zerowy (0,0,0) detalu i wykonywać ruchy narzędzia względem niego. 
-Ten sam punkt określa się w programie CAM; przeważnie wybiera się róg, środek lub otwór na górnej powierzchni surowego materiału.
-
-Podstawową metodą określenia punktu zerowego materiału jest bezpośrednie ustawienie czubka narzędzia w płaszczyznach X i Y nad fizycznym materiałem
-w miejscu wyznaczonym w programie CAM a następnie zjazd osi Z w dół. 
-Czasami korzysta się z niewielkiego dystansu pomiędzy narzędziem a powierzchnią, np. używając kartki papieru, a w touch off uwzględnia się jej grubość.
-
-Przy każdej osi wybieramy touch off P1 (G54)=0, wtedy do WCS zostaną przypisane wartości aktualnego położenia osi XYZ.
-
-
-
+   
+   
     
 </details>
  
