@@ -385,7 +385,8 @@ Jeśli dwa silniki mają współpracować w jednej płaszczyźnie przed homowani
 ponieważ drugi silnik Y2 będzie chciał drastycznie wyrównać pozycję do pierwszego Y.     
 Dopiero potem należy kliknąć Home Axis.     
      
-Należy także pamiętać, aby nie pracować bez Home Axis, ponieważ soft limits są wyłączone i można wyjechać poza dozwolony obszar aż do pierwszej fizycznej przeszkody.     
+```Należy także pamiętać aby nie pracować bez Home Axis,```      
+ponieważ soft limits są wyłączone i można wyjechać poza dozwolony obszar aż do pierwszej fizycznej przeszkody.     
 Tryb jog bez Home Axis służy tylko do bezpiecznego wycofania np. narzędzia z przestrzeni materiału.      
      
 Przed montażem silników należy wykonać homing do 0.     
