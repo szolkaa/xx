@@ -377,7 +377,7 @@ Po włączeniu programu można podłączyć kabel ethernet i włączyć zasilani
     
 <details>     
      
-<summary id=9. Układ współrzędnych maszyny>9. Układ współrzędnych maszyny </summary>     
+<summary id=9. Układ współrzędnych maszyny (MCS)>9. Układ współrzędnych maszyny (MCS)</summary>     
  *          
              
 W konfiguracji custom homing component układ współrzędnych maszyny MCS (G53) wypada i opiera się na wartości 0 dla każdego enkodera absolutnego w silniku.     
