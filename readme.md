@@ -414,7 +414,7 @@ MAX_LIMIT = 0            MAX_LIMIT = 545
     
 <details>     
      
-<summary id=9. Układ Współrzędnych Roboczych (WCS)>9. Układ Współrzędnych Roboczych (WCS)</summary>        
+<summary id=10. Układ Współrzędnych Roboczych (WCS)>10. Układ Współrzędnych Roboczych (WCS)</summary>        
 
 
 WCS G54 to układ współrzędnych ustawiony względem detalu. Pozwala określić punkt zerowy (0,0,0) detalu i wykonywać ruchy narzędzia względem niego. 
