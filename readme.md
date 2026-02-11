@@ -380,7 +380,7 @@ Po włączeniu programu można podłączyć kabel ethernet i włączyć zasilani
 <summary id=9. Układ współrzędnych maszyny>9. Układ współrzędnych maszyny </summary>     
  *          
              
-W konfiguracji custom homing component układ współrzędnych maszyny MCS (G53) wypada i opiera się na wartości 0 dla każdego enkodera w silniku.     
+W konfiguracji custom homing component układ współrzędnych maszyny MCS (G53) wypada i opiera się na wartości 0 dla każdego enkodera absolutnego w silniku.     
 Jeśli dwa silniki mają współpracować w jednej płaszczyźnie przed homowaniem, w trybie jog należy ustawić je w tym samym położeniu enkodera — najlepiej każdy na 0.00,     
 ponieważ drugi silnik Y2 będzie chciał drastycznie wyrównać pozycję do pierwszego Y.     
 Dopiero potem należy kliknąć Home Axis.     
