@@ -370,8 +370,38 @@ Po włączeniu programu można podłączyć kabel ethernet i włączyć zasilani
       
 ![b6](images/b6.png)       
     
-
-----------------------
+.             
+.        
+.          
+...............................................................................................     
+.         
+.            
+.            
+.                
+W konfiguracji custom homing component układ współrzędnych maszyny MCS (G53) wypada i opiera się na wartości 0 dla każdego enkodera w silniku.     
+Jeśli dwa silniki mają współpracować w jednej płaszczyźnie przed homowaniem, w trybie jog należy ustawić je w tym samym położeniu enkodera — najlepiej każdy na 0.00,     
+ponieważ drugi silnik Y2 będzie chciał drastycznie wyrównać pozycję do pierwszego Y.     
+Dopiero potem należy kliknąć Home Axis.     
+     
+Należy także pamiętać, aby nie pracować bez Home Axis, ponieważ soft limits są wyłączone i można wyjechać poza dozwolony obszar aż do pierwszej fizycznej przeszkody.     
+Tryb jog bez Home Axis służy tylko do bezpiecznego wycofania np. narzędzia z przestrzeni materiału.      
+     
+Przed montażem silników należy wykonać homing do 0.     
+     
+Otworzyć zakładkę MDI [F5]:     
+G53 G0 Z0     
+potem:     
+G53 G0 X0 Y0     
+lub:     
+G53 G0 X0 Y0 Z0     
+Najłatwiej przekręcić nakrętkę na śrubie blisko jednego końca i, gdy enkoder jest w pozycji 0, połączyć śrubę kulową z silnikiem.     
+Następnie zmierzyć, ile zostało bezpiecznej przestrzeni do końca śruby,       
+i określić te wartości w pliku INI, zależnie od kierunku śruby, np.:     
+MIN_LIMIT = -545    lub: MIN_LIMIT = 0     
+MAX_LIMIT = 0            MAX_LIMIT = 545      
+    
+  
+   
     
 </details>
  
