@@ -394,8 +394,10 @@ potem:
 G53 G0 X0 Y0     
 lub:     
 G53 G0 X0 Y0 Z0     
-Najłatwiej przekręcić nakrętkę na śrubie blisko jednego końca i, gdy enkoder jest w pozycji 0, połączyć śrubę kulową z silnikiem.     
-Następnie zmierzyć, ile zostało bezpiecznej przestrzeni do końca śruby,       
+
+      
+Najłatwiej przekręcić nakrętkę na śrubie blisko jednego końca i gdy enkoder jest w pozycji 0, połączyć śrubę kulową z silnikiem.     
+Następnie zmierzyć ile zostało bezpiecznej przestrzeni do końca śruby,       
 i określić te wartości w pliku INI, zależnie od kierunku śruby, np.:     
 MIN_LIMIT = -545    lub: MIN_LIMIT = 0     
 MAX_LIMIT = 0            MAX_LIMIT = 545      
