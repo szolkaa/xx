@@ -403,8 +403,8 @@ Najłatwiej przekręcić nakrętkę na śrubie blisko jednego końca i gdy enkod
 Następnie zmierzyć ile zostało bezpiecznej przestrzeni do końca śruby,       
 i określić te wartości w pliku INI, zależnie od kierunku śruby, np.:      
 ```     
-MIN_LIMIT = -545    lub: MIN_LIMIT = 0     
-MAX_LIMIT = 0            MAX_LIMIT = 545      
+MIN_LIMIT = -545    lub: MIN_LIMIT = -1     
+MAX_LIMIT = 1            MAX_LIMIT = 545      
 ```    
   
 
